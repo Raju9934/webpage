@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Boxes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .box {
+            background-color: rgb(135, 222, 213);
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            border-radius: 0.3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 1200px) {
+            .box {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+ /* Navbar styles */
+ .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+
+        .navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* Responsive navbar */
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {display: none;}
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="home.html" class="active">Home</a>
+        <a href="login.html">Login</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            &#9776;
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="box" style="background-color: rgb(135, 222, 213);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(190, 222, 135);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(180, 135, 222);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 213);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 135);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 189);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(135, 222, 213);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(190, 222, 135);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(180, 135, 222);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 213);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 135);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 189);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 189);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 189);">
+            <p>Price: 1200 /-</p>
+        </div>
+        <div class="box" style="background-color: rgb(222, 135, 189);">
+            <p>Price: 1200 /-</p>
+        </div>
+    </div>
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("myNavbar");
+            if (navbar.className === "navbar") {
+                navbar.className += " responsive";
+            } else {
+                navbar.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>
